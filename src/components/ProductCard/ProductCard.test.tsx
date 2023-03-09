@@ -23,6 +23,7 @@ describe('ProductCard', () => {
         const renderedCard = render(
             <ProductCard key={testProduct.id} {...testProduct} />
         );
+        // need to mock func get price
         expect(renderedCard.asFragment()).toMatchSnapshot();
     });
 });
