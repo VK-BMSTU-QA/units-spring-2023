@@ -3,15 +3,30 @@ import { updateCategories } from '../updateCategories';
 
 describe('test updateCategories function', () => {
     const homeCategory: Category = 'Для дома';
-    const eclectroCategory: Category = 'Электроника';
+    const electroCategory: Category = 'Электроника';
     const clothesCategory: Category = 'Одежда';
 
-    it('should return products that include changed category', () => {
-        expect(
-            updateCategories(
-                [homeCategory, clothesCategory, eclectroCategory],
-                clothesCategory
-            )
-        );
-    });
+    test.each<{
+        currCategories: Category[];
+        changedCategories: Category;
+        expected: Category[];
+    }>([
+        {
+            currCategories: [homeCategory, electroCategory, clothesCategory],
+            changedCategories: homeCategory,
+            expected: [electroCategory, clothesCategory],
+        },
+        {
+            currCategories: [homeCategory, clothesCategory],
+            changedCategories: electroCategory,
+            expected: [homeCategory, clothesCategory, electroCategory],
+        },
+    ])(
+        'should return products that include changed category',
+        ({ currCategories, changedCategories, expected }) => {
+            expect(
+                updateCategories(currCategories, changedCategories)
+            ).toStrictEqual(expected);
+        }
+    );
 });

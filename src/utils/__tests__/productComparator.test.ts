@@ -32,27 +32,54 @@ describe('test productComparator function', () => {
     const plusRes = 1;
     const minusRes = -1;
 
-    it('should return default value', () => {
-        expect(productComparator(defaultVal)(lProduct, rProduct)).toBe(zeroRes);
-    });
-
-    it('should return true value in case right > left', () => {
-        expect(productComparator(lessVal)(rProduct, lProduct)).toBe(plusRes);
-    });
-
-    it('should return false value in case right > left', () => {
-        expect(productComparator(moreVal)(rProduct, lProduct)).toBe(minusRes);
-    });
-
-    it('should return false value in case right < left', () => {
-        expect(productComparator(lessVal)(lProduct, rProduct)).toBe(minusRes);
-    });
-
-    it('should return true value in case right < left', () => {
-        expect(productComparator(moreVal)(lProduct, rProduct)).toBe(plusRes);
-    });
-
-    it('should return zero value if prices are equal', () => {
-        expect(productComparator(lessVal)(lProduct, eqProduct)).toBe(zeroRes);
-    });
+    test.each<{
+        sortType: SortBy;
+        product: Product;
+        otherProduct: Product;
+        expected: number;
+    }>([
+        {
+            sortType: defaultVal,
+            product: lProduct,
+            otherProduct: rProduct,
+            expected: zeroRes,
+        },
+        {
+            sortType: lessVal,
+            product: rProduct,
+            otherProduct: lProduct,
+            expected: plusRes,
+        },
+        {
+            sortType: moreVal,
+            product: rProduct,
+            otherProduct: lProduct,
+            expected: minusRes,
+        },
+        {
+            sortType: lessVal,
+            product: lProduct,
+            otherProduct: rProduct,
+            expected: minusRes,
+        },
+        {
+            sortType: moreVal,
+            product: lProduct,
+            otherProduct: rProduct,
+            expected: plusRes,
+        },
+        {
+            sortType: lessVal,
+            product: lProduct,
+            otherProduct: eqProduct,
+            expected: zeroRes,
+        },
+    ])(
+        'should return boolean value that depends on comparing products fields',
+        ({ sortType, product, otherProduct, expected }) => {
+            expect(productComparator(sortType)(product, otherProduct)).toBe(
+                expected
+            );
+        }
+    );
 });
