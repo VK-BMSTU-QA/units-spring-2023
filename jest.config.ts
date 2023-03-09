@@ -16,7 +16,7 @@ export default {
     collectCoverageFrom: [
         'src/components/**/*.tsx',
         'src/pages/**/*.tsx',
-        'src/utils/**/{!(index),}.ts',
+        'src/utils/**/!(index).ts',
     ],
     coverageThreshold: {
         global: {
