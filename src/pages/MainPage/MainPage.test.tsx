@@ -36,9 +36,9 @@ describe('MainPage test', () => {
 
     it('sort button should render in page', () => {
         const rendered = render(<MainPage/>);
-        const sort_button = rendered.getAllByRole('button').filter(item => item.classList.contains('sort-button'))[0];
+        const sort_button = rendered.baseElement.querySelector('.sort-button');
         
-        expect(sort_button).toBeInTheDocument();
+        expect(sort_button).not.toBe(null);
     });
 
     it('test sorting', () => {

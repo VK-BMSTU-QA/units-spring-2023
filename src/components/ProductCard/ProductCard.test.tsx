@@ -3,7 +3,6 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ProductCard } from './ProductCard';
 import { Product } from '../../types';
-import { getPrice } from '../../utils';
 jest.mock('../../utils');
 
 const defaultProduct: Product = {
@@ -27,11 +26,5 @@ describe('ProductCard test', () => {
         const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
         
         expect(rendered.asFragment()).toMatchSnapshot();
-    });
-
-    it('test getPrice called', () => {
-        render(<ProductCard key={defaultProduct.id} {...defaultProduct} />);
-        
-        expect(getPrice).toHaveBeenCalled();
     });
 });

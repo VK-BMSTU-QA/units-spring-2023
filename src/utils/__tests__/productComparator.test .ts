@@ -22,11 +22,11 @@ describe('Тест функции productComparator', () => {
     it('Сортировка по умолчанию', () => {
         const sortedBy: SortBy = 'по умолчанию';
 
-        expect(productsMock.sort(productComparator(sortedBy))).toEqual(productsMock);
+        expect(productComparator(sortedBy)(productsMock[0], productsMock[1])).toEqual(0);
     });
 
     it.each([
-        [productsMock, 'по возрастанию цены' as SortBy, productsMock],
+        [productsMock, 'по возрастанию цены' as SortBy, -1],
         [[
             {
                 ...productsMock[1],
@@ -36,29 +36,13 @@ describe('Тест функции productComparator', () => {
             {
                 ...productsMock[0]
             },
-        ] as Product[],'по возрастанию цены' as SortBy, [
-            {
-                ...productsMock[0]
-            },
-            {
-                ...productsMock[1],
-                price: 10000,
-                priceSymbol: '$',
-            },
-        ] as Product[]],
+        ] as Product[],'по возрастанию цены' as SortBy, 1],
     ])('Сортировка по возрастанию цены', (products, sortedBy, expected) => {
-        expect(products.sort(productComparator(sortedBy))).toEqual(expected);
+        expect(productComparator(sortedBy)(products[0], products[1])).toEqual(expected);
     });
 
     it.each([
-        [productsMock, 'по убыванию цены' as SortBy, [
-            {
-                ...productsMock[1]
-            },
-            {
-                ...productsMock[0]
-            },
-        ] as Product[]],
+        [productsMock, 'по убыванию цены' as SortBy, 1],
         [[
             {
                 ...productsMock[1],
@@ -68,18 +52,9 @@ describe('Тест функции productComparator', () => {
             {
                 ...productsMock[0]
             },
-        ] as Product[],'по убыванию цены' as SortBy, [
-            {
-                ...productsMock[1],
-                price: 10000,
-                priceSymbol: '$',
-            },
-            {
-                ...productsMock[0]
-            },
-        ] as Product[]],
+        ] as Product[],'по убыванию цены' as SortBy, -1],
     ])('Сортировка по убыванию цены', (products, sortedBy, expected) => {
-        expect(products.sort(productComparator(sortedBy))).toEqual(expected);
+        expect(productComparator(sortedBy)(products[0], products[1])).toEqual(expected);
     });
 
     it('Сортировка при одинаковой цене', () => {
@@ -96,20 +71,7 @@ describe('Тест функции productComparator', () => {
                 category: 'Электроника'  as Category,
             },
         ];
-        const expected: Product[] = [
-            {
-                ...productsMock[1],
-                price: 10000,
-            },
-            {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника'  as Category,
-            },
-        ];
 
-        expect(products.sort(productComparator('по убыванию цены' as SortBy))).toEqual(expected);
+        expect(productComparator('по убыванию цены' as SortBy)(products[0], products[1])).toEqual(0);
     });
 });
