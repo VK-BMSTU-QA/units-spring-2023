@@ -40,7 +40,7 @@ jest.mock('../../utils/getPrice', () => {
     return {
         __esModule: true,
         getPrice: jest.fn((value: number, symbol: PriceSymbol = '₽'): string =>
-            `${value.toLocaleString()} ${symbol}`
+            `${value.toLocaleString('ru-RU')} ${symbol}`
         ),
     };
 });
