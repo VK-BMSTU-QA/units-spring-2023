@@ -5,7 +5,7 @@ import { Category, SortBy } from '../../types';
 
 describe('Testing MainPage', () => {
     beforeAll(() => {
-        jest.useFakeTimers().setSystemTime(new Date('2023-03-10'));
+        jest.useFakeTimers().setSystemTime(new Date('2023-04-10T00:00:00'));
     });
 
     afterAll(() =>{

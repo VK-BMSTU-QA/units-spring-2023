@@ -11,7 +11,7 @@ exports[`Testing MainPage Should be in the doc 1`] = `
       VK Маркет
     </h2>
     <h3>
-      03:00:00
+      00:00:00
     </h3>
     <div
       class="main-page__parameters"
@@ -203,7 +203,7 @@ exports[`Testing MainPage Should sorting 1`] = `
           VK Маркет
         </h2>
         <h3>
-          03:00:00
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -391,7 +391,7 @@ exports[`Testing MainPage Should sorting 1`] = `
         VK Маркет
       </h2>
       <h3>
-        03:00:00
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
@@ -636,7 +636,7 @@ exports[`Testing MainPage Should sorting 2`] = `
           VK Маркет
         </h2>
         <h3>
-          03:00:00
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -824,7 +824,7 @@ exports[`Testing MainPage Should sorting 2`] = `
         VK Маркет
       </h2>
       <h3>
-        03:00:00
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
@@ -1069,7 +1069,7 @@ exports[`Testing MainPage Should sorting 3`] = `
           VK Маркет
         </h2>
         <h3>
-          03:00:00
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -1257,7 +1257,7 @@ exports[`Testing MainPage Should sorting 3`] = `
         VK Маркет
       </h2>
       <h3>
-        03:00:00
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
