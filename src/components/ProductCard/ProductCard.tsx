@@ -13,17 +13,17 @@ export const ProductCard: FC<Product> = ({
     imgUrl,
 }) => {
     return (
-        <div className="product-card">
+        <div className="product-card" data-testid='product-card'>
             <div className="product-card__text">
-                <h2 className="product-card__name">{name}</h2>
-                <div className="product-card__description">{description}</div>
-                <h1 className="product-card__price">
+                <h2 className="product-card__name" data-testid='product-card__name'>{name}</h2>
+                <div className="product-card__description" data-testid='product-card__description'>{description}</div>
+                <h1 className="product-card__price" data-testid='product-card__price'>
                     {getPrice(price, priceSymbol)}
                 </h1>
-                <div className="product-card__category">{category}</div>
+                <div className="product-card__category" data-testid='product-card__category'>{category}</div>
             </div>
             {imgUrl && (
-                <img src={imgUrl} alt={name} className="product-card__image" />
+                <img src={imgUrl} alt={name} className="product-card__image" data-testid='product-card__image' />
             )}
         </div>
     );
