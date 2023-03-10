@@ -16,9 +16,6 @@ describe('Button render', () => {
                 onSortButtonClick={onSortButtonClick}
             />
         );
-        expect(renderedButton.getByRole('button')).toHaveTextContent(
-            'Сортировать по умолчанию'
-        );
         expect(renderedButton.asFragment()).toMatchSnapshot();
     });
     it('check button text', () => {
