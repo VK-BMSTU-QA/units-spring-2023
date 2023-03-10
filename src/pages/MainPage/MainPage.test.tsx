@@ -9,7 +9,7 @@ describe('MainPage test', () => {
     it('test render page without currentTime', () => {
         const rendered = render(<MainPage/>);
         
-        expect(rendered).toMatchSnapshot();
+        expect(rendered.asFragment()).toMatchSnapshot();
     });
 
     describe.each([
