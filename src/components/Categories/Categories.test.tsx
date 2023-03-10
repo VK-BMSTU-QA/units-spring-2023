@@ -1,6 +1,6 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { render, fireEvent } from '@testing-library/react';
 import { Categories } from './Categories';
 
 afterEach(jest.clearAllMocks);
@@ -17,9 +17,11 @@ describe('Categories test', () => {
         expect(rendered.getByText('Одежда')).toHaveClass(
             'categories__badge_selected'
         );
+
         expect(rendered.getByText('Электроника')).not.toHaveClass(
             'categories__badge_selected'
         );
+
         expect(rendered.getByText('Для дома')).not.toHaveClass(
             'categories__badge_selected'
         );

@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage test should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="main-page"
+  >
+    <h2
+      class="main-page__title"
+    >
+      VK Маркет
+    </h2>
+    <h3>
+      03:00:00
+    </h3>
+    <div
+      class="main-page__parameters"
+    >
+      <div
+        class="categories"
+      >
+        <div
+          class="categories__badge"
+        >
+          Одежда
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Для дома
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Электроника
+        </div>
+      </div>
+      <button
+        class="sort-button"
+      >
+        Сортировать по умолчанию
+      </button>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          оладушки
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          рас рас и готово
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          300 ₽
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Одежда
+        </div>
+      </div>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          оладушки2
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          рас рас и готово2
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          3 000 $
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Электроника
+        </div>
+      </div>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          оладушки3
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          рас рас и готово3
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          30 000 ₽
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Для дома
+        </div>
+      </div>
+      <img
+        alt="оладушки3"
+        class="product-card__image"
+        src="/olad.png"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
