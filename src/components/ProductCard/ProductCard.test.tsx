@@ -7,7 +7,7 @@ import { ProductCard } from './ProductCard';
 import getPrice from '../../utils/getPrice';
 jest.mock('../../utils/getPrice');
 
-const mockMyFunction = getPrice as jest.Mock;
+const mockGetPrice = getPrice as jest.Mock;
     
 afterEach(jest.clearAllMocks);
 
@@ -23,11 +23,11 @@ describe('product card test', () => {
             />
         );
 
-        expect(renderedCard.asFragment).toMatchSnapshot();
+        expect(renderedCard.asFragment()).toMatchSnapshot();
     });
 
     it('should call get price function', () => {
-        expect(mockMyFunction).not.toBeCalled();
+        expect(mockGetPrice).not.toBeCalled();
         const renderedCard = render(
             <ProductCard
                 id={0}
@@ -37,9 +37,11 @@ describe('product card test', () => {
                 category='Электроника'
             />
         );
-        expect(mockMyFunction).toBeCalledTimes(1);
+        expect(mockGetPrice).toBeCalledTimes(1);
     });
+});
 
+describe('product card image test', () => {
     it('should not add image', () => {
         const renderedCard = render(
             <ProductCard
