@@ -3,6 +3,13 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ProductCard } from './ProductCard';
 
+jest.mock('../../utils', () => {
+    return {
+        __esModule: true,
+        getPrice: jest.fn(() => '1,337 $'),
+    };
+});
+
 afterEach(jest.clearAllMocks);
 
 describe('Product Card test', () => {
@@ -35,6 +42,21 @@ describe('Product Card test', () => {
         );
 
         expect(rendered.getByRole('img').className).toBe('product-card__image');
+    });
+
+    it('should not insert image if imgUrl is not provided', () => {
+        const rendered = render(
+            <ProductCard
+                name={'IPhone'}
+                category={'Электроника'}
+                description={'Новый телефон Iphone 15 без регистрации'}
+                id={1}
+                price={1337}
+                priceSymbol={'$'}
+            />
+        );
+
+        expect(rendered.queryByRole('img')).not.toBeInTheDocument();
     });
 
     it('should show price correctly', () => {

@@ -74,6 +74,7 @@ exports[`test Main Page click on sort btn should sort items correctly 1`] = `
       <img
         alt="Настольная лампа"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/lamp.png"
       />
     </div>
@@ -169,6 +170,7 @@ exports[`test Main Page click on sort btn should sort items correctly 1`] = `
       <img
         alt="IPhone 14 Pro"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/iphone.png"
       />
     </div>
@@ -250,6 +252,7 @@ exports[`test Main Page click on sort btn should sort items correctly 2`] = `
       <img
         alt="IPhone 14 Pro"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/iphone.png"
       />
     </div>
@@ -345,6 +348,7 @@ exports[`test Main Page click on sort btn should sort items correctly 2`] = `
       <img
         alt="Настольная лампа"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/lamp.png"
       />
     </div>
@@ -426,6 +430,7 @@ exports[`test Main Page click on sort btn should sort items correctly 3`] = `
       <img
         alt="IPhone 14 Pro"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/iphone.png"
       />
     </div>
@@ -491,6 +496,7 @@ exports[`test Main Page click on sort btn should sort items correctly 3`] = `
       <img
         alt="Настольная лампа"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/lamp.png"
       />
     </div>
@@ -602,6 +608,7 @@ exports[`test Main Page should render correctly in DOM tree 1`] = `
       <img
         alt="IPhone 14 Pro"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/iphone.png"
       />
     </div>
@@ -667,6 +674,7 @@ exports[`test Main Page should render correctly in DOM tree 1`] = `
       <img
         alt="Настольная лампа"
         class="product-card__image"
+        data-testid="product-card__image"
         src="/lamp.png"
       />
     </div>
