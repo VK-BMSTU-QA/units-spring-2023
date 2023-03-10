@@ -1,5 +1,656 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MainPage test test categories should filter by categories 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="main-page"
+      >
+        <h2
+          class="main-page__title"
+        >
+          VK Маркет
+        </h2>
+        <h3 />
+        <div
+          class="main-page__parameters"
+        >
+          <div
+            class="categories"
+          >
+            <div
+              class="categories__badge"
+            >
+              Одежда
+            </div>
+            <div
+              class="categories__badge categories__badge_selected"
+            >
+              Для дома
+            </div>
+            <div
+              class="categories__badge"
+            >
+              Электроника
+            </div>
+          </div>
+          <button
+            class="sort-button"
+          >
+            Сортировать 
+            по умолчанию
+          </button>
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              Настольная лампа
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Говорят, что ее использовали в pixar
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Для дома
+            </div>
+          </div>
+          <img
+            alt="Настольная лампа"
+            class="product-card__image"
+            src="/lamp.png"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="main-page"
+    >
+      <h2
+        class="main-page__title"
+      >
+        VK Маркет
+      </h2>
+      <h3 />
+      <div
+        class="main-page__parameters"
+      >
+        <div
+          class="categories"
+        >
+          <div
+            class="categories__badge"
+          >
+            Одежда
+          </div>
+          <div
+            class="categories__badge categories__badge_selected"
+          >
+            Для дома
+          </div>
+          <div
+            class="categories__badge"
+          >
+            Электроника
+          </div>
+        </div>
+        <button
+          class="sort-button"
+        >
+          Сортировать 
+          по умолчанию
+        </button>
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            Настольная лампа
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Говорят, что ее использовали в pixar
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Для дома
+          </div>
+        </div>
+        <img
+          alt="Настольная лампа"
+          class="product-card__image"
+          src="/lamp.png"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`MainPage test test categories should filter by categories 2`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="main-page"
+      >
+        <h2
+          class="main-page__title"
+        >
+          VK Маркет
+        </h2>
+        <h3 />
+        <div
+          class="main-page__parameters"
+        >
+          <div
+            class="categories"
+          >
+            <div
+              class="categories__badge categories__badge_selected"
+            >
+              Одежда
+            </div>
+            <div
+              class="categories__badge"
+            >
+              Для дома
+            </div>
+            <div
+              class="categories__badge"
+            >
+              Электроника
+            </div>
+          </div>
+          <button
+            class="sort-button"
+          >
+            Сортировать 
+            по умолчанию
+          </button>
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              Костюм гуся
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Запускаем гуся, работяги
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Одежда
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="main-page"
+    >
+      <h2
+        class="main-page__title"
+      >
+        VK Маркет
+      </h2>
+      <h3 />
+      <div
+        class="main-page__parameters"
+      >
+        <div
+          class="categories"
+        >
+          <div
+            class="categories__badge categories__badge_selected"
+          >
+            Одежда
+          </div>
+          <div
+            class="categories__badge"
+          >
+            Для дома
+          </div>
+          <div
+            class="categories__badge"
+          >
+            Электроника
+          </div>
+        </div>
+        <button
+          class="sort-button"
+        >
+          Сортировать 
+          по умолчанию
+        </button>
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            Костюм гуся
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Запускаем гуся, работяги
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Одежда
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`MainPage test test categories should filter by categories 3`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="main-page"
+      >
+        <h2
+          class="main-page__title"
+        >
+          VK Маркет
+        </h2>
+        <h3 />
+        <div
+          class="main-page__parameters"
+        >
+          <div
+            class="categories"
+          >
+            <div
+              class="categories__badge"
+            >
+              Одежда
+            </div>
+            <div
+              class="categories__badge"
+            >
+              Для дома
+            </div>
+            <div
+              class="categories__badge categories__badge_selected"
+            >
+              Электроника
+            </div>
+          </div>
+          <button
+            class="sort-button"
+          >
+            Сортировать 
+            по умолчанию
+          </button>
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              IPhone 14 Pro
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Latest iphone, buy it now
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Электроника
+            </div>
+          </div>
+          <img
+            alt="IPhone 14 Pro"
+            class="product-card__image"
+            src="/iphone.png"
+          />
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              Принтер
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Незаменимая вещь для студента
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Электроника
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="main-page"
+    >
+      <h2
+        class="main-page__title"
+      >
+        VK Маркет
+      </h2>
+      <h3 />
+      <div
+        class="main-page__parameters"
+      >
+        <div
+          class="categories"
+        >
+          <div
+            class="categories__badge"
+          >
+            Одежда
+          </div>
+          <div
+            class="categories__badge"
+          >
+            Для дома
+          </div>
+          <div
+            class="categories__badge categories__badge_selected"
+          >
+            Электроника
+          </div>
+        </div>
+        <button
+          class="sort-button"
+        >
+          Сортировать 
+          по умолчанию
+        </button>
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            IPhone 14 Pro
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Latest iphone, buy it now
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Электроника
+          </div>
+        </div>
+        <img
+          alt="IPhone 14 Pro"
+          class="product-card__image"
+          src="/iphone.png"
+        />
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            Принтер
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Незаменимая вещь для студента
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Электроника
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`MainPage test test render page without currentTime 1`] = `
 <DocumentFragment>
   <div
@@ -155,4 +806,373 @@ exports[`MainPage test test render page without currentTime 1`] = `
     </div>
   </div>
 </DocumentFragment>
+`;
+
+exports[`MainPage test test sorting 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="main-page"
+      >
+        <h2
+          class="main-page__title"
+        >
+          VK Маркет
+        </h2>
+        <h3 />
+        <div
+          class="main-page__parameters"
+        >
+          <div
+            class="categories"
+          >
+            <div
+              class="categories__badge"
+            >
+              Одежда
+            </div>
+            <div
+              class="categories__badge"
+            >
+              Для дома
+            </div>
+            <div
+              class="categories__badge"
+            >
+              Электроника
+            </div>
+          </div>
+          <button
+            class="sort-button"
+          >
+            Сортировать 
+            по возрастанию цены
+          </button>
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              Настольная лампа
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Говорят, что ее использовали в pixar
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Для дома
+            </div>
+          </div>
+          <img
+            alt="Настольная лампа"
+            class="product-card__image"
+            src="/lamp.png"
+          />
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              Костюм гуся
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Запускаем гуся, работяги
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Одежда
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              Принтер
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Незаменимая вещь для студента
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Электроника
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+        >
+          <div
+            class="product-card__text"
+          >
+            <h2
+              class="product-card__name"
+            >
+              IPhone 14 Pro
+            </h2>
+            <div
+              class="product-card__description"
+            >
+              Latest iphone, buy it now
+            </div>
+            <h1
+              class="product-card__price"
+            />
+            <div
+              class="product-card__category"
+            >
+              Электроника
+            </div>
+          </div>
+          <img
+            alt="IPhone 14 Pro"
+            class="product-card__image"
+            src="/iphone.png"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="main-page"
+    >
+      <h2
+        class="main-page__title"
+      >
+        VK Маркет
+      </h2>
+      <h3 />
+      <div
+        class="main-page__parameters"
+      >
+        <div
+          class="categories"
+        >
+          <div
+            class="categories__badge"
+          >
+            Одежда
+          </div>
+          <div
+            class="categories__badge"
+          >
+            Для дома
+          </div>
+          <div
+            class="categories__badge"
+          >
+            Электроника
+          </div>
+        </div>
+        <button
+          class="sort-button"
+        >
+          Сортировать 
+          по возрастанию цены
+        </button>
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            Настольная лампа
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Говорят, что ее использовали в pixar
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Для дома
+          </div>
+        </div>
+        <img
+          alt="Настольная лампа"
+          class="product-card__image"
+          src="/lamp.png"
+        />
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            Костюм гуся
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Запускаем гуся, работяги
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Одежда
+          </div>
+        </div>
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            Принтер
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Незаменимая вещь для студента
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Электроника
+          </div>
+        </div>
+      </div>
+      <div
+        class="product-card"
+      >
+        <div
+          class="product-card__text"
+        >
+          <h2
+            class="product-card__name"
+          >
+            IPhone 14 Pro
+          </h2>
+          <div
+            class="product-card__description"
+          >
+            Latest iphone, buy it now
+          </div>
+          <h1
+            class="product-card__price"
+          />
+          <div
+            class="product-card__category"
+          >
+            Электроника
+          </div>
+        </div>
+        <img
+          alt="IPhone 14 Pro"
+          class="product-card__image"
+          src="/iphone.png"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
