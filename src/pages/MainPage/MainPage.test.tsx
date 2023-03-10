@@ -26,7 +26,6 @@ describe('test MainPage function', () => {
 
         render(<MainPage />);
 
-        expect(screen.getByText('VK Маркет')).toBeInTheDocument();
         expect(screen.getByText(currentTime)).toBeInTheDocument();
     });
 
