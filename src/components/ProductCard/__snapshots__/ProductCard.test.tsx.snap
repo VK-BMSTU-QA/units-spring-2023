@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard render should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="product-card"
+  >
+    <div
+      class="product-card__text"
+    >
+      <h2
+        class="product-card__name"
+      >
+        карта
+      </h2>
+      <div
+        class="product-card__description"
+      >
+        asdasd
+      </div>
+      <h1
+        class="product-card__price"
+      >
+        100 $
+      </h1>
+      <div
+        class="product-card__category"
+      >
+        Для дома
+      </div>
+    </div>
+    <img
+      alt="карта"
+      class="product-card__image"
+      src="asd"
+    />
+  </div>
+</DocumentFragment>
+`;
