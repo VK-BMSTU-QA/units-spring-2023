@@ -10,28 +10,28 @@ describe("test applyCategories function - OK", () => {
       id: 23,
       name: "some name",
       description: "some description",
-      price: 444,
+      price: 323,
       category: "Электроника"
     },
     {
       id: 23,
       name: "some name",
       description: "some",
-      price: 444,
+      price: 4245,
       category: "Одежда"
     },
     {
       id: 23,
       name: "some name",
       description: "some",
-      price: 444,
+      price: 34646,
       category: "Для дома"
     },
     {
       id: 23,
       name: "some name",
       description: "some",
-      price: 444,
+      price: 353636,
       category: "Для дома"
     }
   ];
