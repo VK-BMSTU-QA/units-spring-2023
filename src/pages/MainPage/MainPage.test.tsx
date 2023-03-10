@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import {
   applyCategories,
-  getPrice
+  getNextSortBy
 } from "../../utils";
 import { MainPage } from './MainPage';
 import { Category, PriceSymbol, Product } from "../../types";
@@ -45,6 +45,13 @@ jest.mock('../../hooks/useProducts', () => {
   };
 });
 
+jest.mock('../../utils/getNextSortBy', () => {
+  return {
+    __esModule: true,
+    getNextSortBy: jest.fn(() => 'по возрастанию цены'),
+  };
+});
+
 jest.mock('../../utils/applyCategories', () => {
   return {
     __esModule: true,
@@ -82,5 +89,15 @@ describe('test mainPage', () => {
     );
 
     expect(applyCategories).toHaveBeenCalledTimes(1);
+  });
+
+  it('must be called select once', () => {
+    const rendered = render(
+        <MainPage />
+    );
+
+    expect(getNextSortBy).toHaveBeenCalledTimes(0);
+    fireEvent.click(rendered.getByText('Сортировать по умолчанию'));
+    expect(getNextSortBy).toHaveBeenCalledTimes(1);
   });
 });
