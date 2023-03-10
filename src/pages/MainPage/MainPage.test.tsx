@@ -11,6 +11,8 @@ import { Category } from '../../types';
 jest.mock('../../utils/updateCategories');
 const mockUpdateCategories = updateCategories as jest.Mock;
 
+jest.mock('../../utils/getPrice');
+
 jest.useFakeTimers().setSystemTime(new Date('2020-01-01 0:0:0'));
 
 afterEach(jest.clearAllMocks);
@@ -38,7 +40,7 @@ describe('Main page test', () => {
     it('should click categories', async () => {
         const category: Category = 'Для дома';
         mockUpdateCategories.mockReturnValue(category);
-        
+
         const renderedPage = render(
             <MainPage
             />

@@ -59,9 +59,7 @@ exports[`Main page test should render 1`] = `
         </div>
         <h1
           class="product-card__price"
-        >
-          999 $
-        </h1>
+        />
         <div
           class="product-card__category"
         >
@@ -92,9 +90,7 @@ exports[`Main page test should render 1`] = `
         </div>
         <h1
           class="product-card__price"
-        >
-          1 000 ₽
-        </h1>
+        />
         <div
           class="product-card__category"
         >
@@ -120,9 +116,7 @@ exports[`Main page test should render 1`] = `
         </div>
         <h1
           class="product-card__price"
-        >
-          699 ₽
-        </h1>
+        />
         <div
           class="product-card__category"
         >
@@ -153,9 +147,7 @@ exports[`Main page test should render 1`] = `
         </div>
         <h1
           class="product-card__price"
-        >
-          7 000 ₽
-        </h1>
+        />
         <div
           class="product-card__category"
         >
