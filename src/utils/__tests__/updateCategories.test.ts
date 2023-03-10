@@ -34,5 +34,4 @@ describe('test updateCategories function', () => {
         expect(updateCategories([], "Одежда")).toEqual(CategoriesResult);
     });
 
-
 });
