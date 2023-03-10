@@ -2,8 +2,8 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MainPage } from './MainPage';
-jest.mock('../../hooks/useCurrentTime');
 jest.mock('../../utils/getPrice');
+jest.useFakeTimers();
 
 afterEach(jest.clearAllMocks);
 describe('MainPage test', () => {
