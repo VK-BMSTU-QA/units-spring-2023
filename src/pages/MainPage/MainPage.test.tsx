@@ -2,8 +2,10 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import {
     getNextSortBy,
+    getPrice,
 } from '../../utils';
 import { MainPage } from './MainPage';
+import { PriceSymbol } from '../../types';
 
 const products = [{
     id: 1,
@@ -33,8 +35,8 @@ const products = [{
 afterEach(jest.clearAllMocks);
 
 jest
-  .useFakeTimers()
-  .setSystemTime(new Date('2020-01-01'));
+    .useFakeTimers()
+    .setSystemTime(new Date(2011, 0, 1, 3, 0, 0, 0));
 
 jest.mock('../../hooks/useProducts', () => {
     return {
@@ -46,6 +48,15 @@ jest.mock('../../utils/getNextSortBy', () => {
     return {
         __esModule: true,
         getNextSortBy: jest.fn(() => 'по возрастанию цены'),
+    };
+});
+
+jest.mock('../../utils/getPrice', () => {
+    return {
+        __esModule: true,
+        getPrice: jest.fn((value: number, symbol: PriceSymbol = '₽'): string =>
+            `${value.toLocaleString()} ${symbol}`
+        ),
     };
 });
 
