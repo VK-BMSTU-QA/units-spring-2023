@@ -4,8 +4,17 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ProductCard } from './ProductCard';
 import { Product } from '../../types/Product';
+import { getPrice } from '../../utils';
 
 afterEach(jest.clearAllMocks);
+
+jest.mock('../../utils/getPrice', () => {
+    return {
+        __esModule: true,
+        getPrice: jest.fn(() => '100 ₽'),
+    };
+});
+
 
 const testProduct: Product  = 
     {
@@ -23,7 +32,13 @@ describe('ProductCard', () => {
         const renderedCard = render(
             <ProductCard key={testProduct.id} {...testProduct} />
         );
-        // need to mock func get price
         expect(renderedCard.asFragment()).toMatchSnapshot();
+    });
+
+    test('func called once', () => {
+        const renderedCard = render(
+            <ProductCard key={testProduct.id} {...testProduct} />
+        );
+        expect(getPrice).toBeCalledTimes(1);
     });
 });

@@ -6,6 +6,7 @@ import { ProductCard } from '../../components/ProductCard';
 import { SortButton } from '../../components/SortButton';
 import { Categories } from '../../components/Categories';
 import { Product } from '../../types/Product';
+import { MainPage } from './MainPage';
 
 afterEach(jest.clearAllMocks);
 
@@ -34,23 +35,24 @@ describe('Main page', () => {
         // );
 
         // const renderedCategories = render(<Categories selectedCategories={[]} />);
-        const currentTime: string = "20:20:20"
+        // const currentTime: string = "20:20:20"
 
-        const renderedPage = render(
-            <div className="main-page">
-            <h2 className="main-page__title">VK Маркет</h2>
-            <h3>{currentTime}</h3>
-            <div className="main-page__parameters">
-            <Categories selectedCategories={[]} />
-                <SortButton
-                   currentSort="по умолчанию"
-                   onSortButtonClick={onSortButtonClick}
-                />
-            </div>
-            <ProductCard key={testProduct.id} {...testProduct} />
-        </div>
-        );
+        // const renderedPage = render(
+        //     <div className="main-page">
+        //     <h2 className="main-page__title">VK Маркет</h2>
+        //     <h3>{currentTime}</h3>
+        //     <div className="main-page__parameters">
+        //     <Categories selectedCategories={[]} />
+        //         <SortButton
+        //            currentSort="по умолчанию"
+        //            onSortButtonClick={onSortButtonClick}
+        //         />
+        //     </div>
+        //     <ProductCard key={testProduct.id} {...testProduct} />
+        // </div>
+        // );
         //used Fake Timers for mock timer
+        const renderedPage = render(<MainPage/>)
         expect(renderedPage.asFragment()).toMatchSnapshot();
     });
 });

@@ -7,7 +7,20 @@ import { SortButton } from './SortButton';
 afterEach(jest.clearAllMocks);
 
 describe('Button render', () => {
-    it('should contain sort text', () => {
+    it('render', () => {
+        const onSortButtonClick = jest.fn();
+        const renderedButton = render(
+            <SortButton
+                currentSort="по умолчанию"
+                onSortButtonClick={onSortButtonClick}
+            />
+        );
+        expect(renderedButton.getByRole('button')).toHaveTextContent(
+            'Сортировать по умолчанию'
+        );
+        expect(renderedButton.asFragment()).toMatchSnapshot();
+    });
+    it('func called once', () => {
         const onSortButtonClick = jest.fn();
         const renderedButton = render(
             <SortButton
@@ -16,14 +29,8 @@ describe('Button render', () => {
             />
         );
 
-        expect(renderedButton.getByRole('button')).toHaveTextContent(
-            'Сортировать по умолчанию'
-        );
-
         expect(onSortButtonClick).toHaveBeenCalledTimes(0);
         fireEvent.click(renderedButton.getByRole('button'));
         expect(onSortButtonClick).toHaveBeenCalledTimes(1);
-
-        expect(renderedButton.asFragment()).toMatchSnapshot();
     });
 });
