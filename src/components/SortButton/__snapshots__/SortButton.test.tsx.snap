@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button render should contain sort text 1`] = `
+exports[`Button render should render correctly 1`] = `
 <DocumentFragment>
   <button
     class="sort-button"
+    data-testid="sort-button"
   >
     Сортировать по умолчанию
   </button>
