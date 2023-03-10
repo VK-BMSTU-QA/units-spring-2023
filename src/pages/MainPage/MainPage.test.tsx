@@ -3,47 +3,52 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MainPage } from './MainPage';
 import { Category, SortBy } from '../../types';
-import { useCurrentTime, useProducts } from '../../hooks';
+import { useProducts } from '../../hooks';
 import { applyCategories, getNextSortBy, updateCategories } from '../../utils';
 
-jest.mock('../../hooks/useCurrentTime');
-jest.mock('../../utils');
+jest.mock('../../utils/applyCategories', () => {
+    return {
+        __esModule: true,
+        applyCategories: jest.fn(() => []),
+    };
+});
+
+jest.mock('../../utils/getNextSortBy', () => {
+    return {
+        __esModule: true,
+        getNextSortBy: jest.fn(() => 'по умолчанию'),
+    };
+});
+
+jest.mock('../../utils/updateCategories', () => {
+    return {
+        __esModule: true,
+        updateCategories: jest.fn(() => ['Для дома']),
+    };
+});
 
 describe('test MainPage function', () => {
     afterEach(jest.clearAllMocks);
+    beforeAll(() => {
+        jest.useFakeTimers().setSystemTime(new Date('March 10, 2023 12:00:00'));
+    });
+    afterAll(() => {
+        jest.useRealTimers();
+    });
 
-    it('should render main page with current time', () => {
-        const currentTime = 'March 10, 2023 12:00:00';
-
-        const mockedCurrTime = useCurrentTime as jest.MockedFunction<
-            typeof useCurrentTime
-        >;
-        const mockedApplyCategory = applyCategories as jest.MockedFunction<
-            typeof applyCategories
-        >;
-        mockedCurrTime.mockReturnValue(currentTime);
-        mockedApplyCategory.mockReturnValue([]);
-
-        render(<MainPage />);
-
-        expect(screen.getByText(currentTime)).toBeInTheDocument();
+    it('should render correctly', () => {
+        const renderPage = render(<MainPage />);
+        expect(renderPage.asFragment()).toMatchSnapshot();
     });
 
     it('should call updateCategories by clicking category', () => {
         const clickedCategory: Category = 'Для дома';
 
-        const mockedUpdateCategories = updateCategories as jest.MockedFunction<
-            typeof updateCategories
-        >;
-        const mockedApplyCategory = applyCategories as jest.MockedFunction<
-            typeof applyCategories
-        >;
-        mockedUpdateCategories.mockReturnValue([clickedCategory]);
-        mockedApplyCategory.mockReturnValue([]);
-
         render(<MainPage />);
 
-        const categoryButton = screen.getByText(clickedCategory);
+        const categoryButton = screen.getByText(clickedCategory, {
+            selector: '.categories__badge',
+        });
         categoryButton.click();
 
         expect(updateCategories).toHaveBeenCalledWith([], clickedCategory);
@@ -52,30 +57,16 @@ describe('test MainPage function', () => {
     it('should call getNextSort function when sort button clicked', () => {
         const sortType: SortBy = 'по умолчанию';
 
-        const mockedNextSort = getNextSortBy as jest.MockedFunction<
-            typeof getNextSortBy
-        >;
-        mockedNextSort.mockReturnValue('по возрастанию цены');
-
         render(<MainPage />);
 
         const sortButton = screen.getByText('Сортировать ' + sortType);
         sortButton.click();
 
-        expect(mockedNextSort).toHaveBeenCalled();
+        expect(getNextSortBy).toHaveBeenCalled();
     });
 
     it('should call applyCategories with the correct arguments', () => {
         const selectedCategories: Category[] = ['Для дома', 'Одежда'];
-
-        const mockedApplyCategory = applyCategories as jest.MockedFunction<
-            typeof applyCategories
-        >;
-        mockedApplyCategory.mock;
-        mockedApplyCategory.mockReturnValueOnce([
-            useProducts()[1],
-            useProducts()[2],
-        ]);
 
         render(<MainPage />);
 
@@ -89,6 +80,6 @@ describe('test MainPage function', () => {
 
         categoryButtonZero.click();
 
-        expect(mockedApplyCategory).toHaveBeenCalledWith(useProducts(), []);
+        expect(applyCategories).toHaveBeenCalledWith(useProducts(), []);
     });
 });

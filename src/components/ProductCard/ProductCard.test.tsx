@@ -5,7 +5,12 @@ import { ProductCard } from './ProductCard';
 import { Product } from '../../types';
 import { getPrice } from '../../utils/getPrice';
 
-jest.mock('../../utils/getPrice');
+jest.mock('../../utils/getPrice', () => {
+    return {
+        __esModule: true,
+        getPrice: jest.fn(() => '1,000 ₽'),
+    };
+});
 
 describe('test ProductCard function', () => {
     afterEach(jest.clearAllMocks);
@@ -20,8 +25,6 @@ describe('test ProductCard function', () => {
             category: 'Для дома',
             imgUrl: 'http://example.com/image.png',
         };
-        const mockedGetPrice = getPrice as jest.MockedFunction<typeof getPrice>;
-        mockedGetPrice.mockReturnValueOnce('1 000 ₽');
 
         const { asFragment } = render(<ProductCard {...product} />);
 
@@ -41,8 +44,6 @@ describe('test ProductCard function', () => {
             priceSymbol: '₽',
             category: 'Одежда',
         };
-        const mockedGetPrice = getPrice as jest.MockedFunction<typeof getPrice>;
-        mockedGetPrice.mockReturnValueOnce('1 000 ₽');
 
         const { queryByAltText } = render(<ProductCard {...product} />);
 
@@ -62,12 +63,10 @@ describe('test ProductCard function', () => {
             category: 'Электроника',
             imgUrl: 'http://example.com/image.png',
         };
-        const mockedGetPrice = getPrice as jest.MockedFunction<typeof getPrice>;
-        mockedGetPrice.mockReturnValueOnce('1,000');
 
         const { getByText } = render(<ProductCard {...product} />);
 
         expect(getPrice).toHaveBeenCalledWith(product.price, undefined);
-        expect(getByText('1,000')).toBeInTheDocument();
+        expect(getByText('1,000 ₽')).toBeInTheDocument();
     });
 });
