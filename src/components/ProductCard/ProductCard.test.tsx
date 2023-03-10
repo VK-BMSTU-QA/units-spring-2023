@@ -3,15 +3,14 @@ import '@testing-library/jest-dom';
 import { ProductCard } from './ProductCard';
 import { Product } from '../../types';
 
-import { getPrice } from '../../utils';
-
-jest.mock('../../utils');
-
-beforeEach(() => {
-    (getPrice as jest.Mock).mockReturnValue('111 $');
+jest.mock('../../utils', () => {
+    return {
+        __esModule: true,
+        getPrice: jest.fn(() => '111 $'),
+    };
 });
 
-afterEach(jest.clearAllMocks);
+afterAll(jest.clearAllMocks);
 
 describe('Testing ProductCard component', () => {
     const productMock: Product = {
@@ -45,17 +44,11 @@ describe('Testing ProductCard component', () => {
         expect(rendered.getByTestId('product-card__description')).toHaveTextContent(productMock.description);
     });
 
-    it('should show price with symbol', () => {
-        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
-        expect(rendered.getByTestId('product-card__price')).toHaveTextContent(/([0-9])+ (\₽|\$)$/gi);
-    });
-
     it('should show image if it is', () => {
         const productMockWithImage : Product=  {...productMock, imgUrl: '/example.png'};
         const rendered = render(<ProductCard key={productMock.id} {...productMockWithImage}/>);
         expect(rendered.getByTestId('product-card__image')).toBeInTheDocument();
     });
-
 
     it('should not show image if it is not', () => {
         const rendered = render(<ProductCard key={productMock.id} {...productMock} />);

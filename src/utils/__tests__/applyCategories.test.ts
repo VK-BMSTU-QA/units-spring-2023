@@ -88,21 +88,11 @@ describe('applyCategories test cases', () => {
         expect(filteredProds.length).toBe(6);
     });
 
-
     test('Пуской список продуктов', () => {
         let filteredProds = applyCategories([], ['Для дома']);
         expect(filteredProds.length).toBe(0);
         expect(filteredProds).toEqual([]);
     });
-
-
-
-    test('Пуской список продуктов', () => {
-        let filteredProds = applyCategories([], ['Для дома']);
-        expect(filteredProds.length).toBe(0);
-        expect(filteredProds).toEqual([]);
-    });
-
 
     test('Пуской список продуктов и категорий', () => {
         let filteredProds = applyCategories([], []);
