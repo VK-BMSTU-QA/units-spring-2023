@@ -1,4 +1,4 @@
-import { Product } from '../../types/Product';
+import { Product } from '../../types';
 import React, { FC } from 'react';
 import { getPrice } from '../../utils';
 
@@ -17,10 +17,18 @@ export const ProductCard: FC<Product> = ({
             <div className="product-card__text">
                 <h2 className="product-card__name">{name}</h2>
                 <div className="product-card__description">{description}</div>
-                <h1 className="product-card__price">
+                <h1
+                    className="product-card__price"
+                    data-testid="product-card__price"
+                >
                     {getPrice(price, priceSymbol)}
                 </h1>
-                <div className="product-card__category">{category}</div>
+                <div
+                    className="product-card__category"
+                    data-testid="product-card__category"
+                >
+                    {category}
+                </div>
             </div>
             {imgUrl && (
                 <img src={imgUrl} alt={name} className="product-card__image" />

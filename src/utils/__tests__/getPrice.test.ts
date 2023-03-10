@@ -5,6 +5,7 @@ describe('test get price function', () => {
     test.each<{ value: number; symbol: PriceSymbol; expected: string }>([
         { value: 100, symbol: '$', expected: '100 $' },
         { value: 150, symbol: '₽', expected: '150 ₽' },
+        { value: 1337, symbol: '$', expected: '1,337 $' },
     ])(
         'should return correct price: $value, with symbol: $symbol',
         ({ value, symbol, expected }) => {

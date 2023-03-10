@@ -4,6 +4,7 @@ exports[`Button render should contain sort text 1`] = `
 <DocumentFragment>
   <button
     class="sort-button"
+    data-testid="sort-button"
   >
     Сортировать по умолчанию
   </button>
