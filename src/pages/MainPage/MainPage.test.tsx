@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MainPage } from './MainPage';
 jest.mock('../../utils/getPrice');
-jest.useFakeTimers();
+jest.useFakeTimers().setSystemTime(new Date('2023-01-01T00:00:00'));
 
 afterEach(jest.clearAllMocks);
 describe('MainPage test', () => {

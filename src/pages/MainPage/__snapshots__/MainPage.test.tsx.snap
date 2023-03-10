@@ -14,7 +14,7 @@ exports[`MainPage test test categories should filter by categories 1`] = `
           VK Маркет
         </h2>
         <h3>
-          00:56:59
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -89,7 +89,7 @@ exports[`MainPage test test categories should filter by categories 1`] = `
         VK Маркет
       </h2>
       <h3>
-        00:56:59
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
@@ -221,7 +221,7 @@ exports[`MainPage test test categories should filter by categories 2`] = `
           VK Маркет
         </h2>
         <h3>
-          00:56:59
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -291,7 +291,7 @@ exports[`MainPage test test categories should filter by categories 2`] = `
         VK Маркет
       </h2>
       <h3>
-        00:56:59
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
@@ -418,7 +418,7 @@ exports[`MainPage test test categories should filter by categories 3`] = `
           VK Маркет
         </h2>
         <h3>
-          00:56:59
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -519,7 +519,7 @@ exports[`MainPage test test categories should filter by categories 3`] = `
         VK Маркет
       </h2>
       <h3>
-        00:56:59
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
@@ -674,7 +674,7 @@ exports[`MainPage test test render page without currentTime 1`] = `
       VK Маркет
     </h2>
     <h3>
-      00:56:59
+      00:00:00
     </h3>
     <div
       class="main-page__parameters"
@@ -836,7 +836,7 @@ exports[`MainPage test test sorting 1`] = `
           VK Маркет
         </h2>
         <h3>
-          00:56:59
+          00:00:00
         </h3>
         <div
           class="main-page__parameters"
@@ -994,7 +994,7 @@ exports[`MainPage test test sorting 1`] = `
         VK Маркет
       </h2>
       <h3>
-        00:56:59
+        00:00:00
       </h3>
       <div
         class="main-page__parameters"
