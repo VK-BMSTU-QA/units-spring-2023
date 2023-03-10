@@ -8,7 +8,7 @@ import { getPrice } from '../../utils';
 jest.mock('../../utils/getPrice', () => {
     return {
         __esModule: true,
-        getPrice: jest.fn(() => '40 000 ₽'),
+        getPrice: jest.fn(() => '300 $'),
     };
 });
 
