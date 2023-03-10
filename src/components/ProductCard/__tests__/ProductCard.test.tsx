@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { ProductCard } from '../ProductCard';
 import { getPrice } from '../../../utils';
@@ -41,5 +41,32 @@ describe('test product card', () => {
             />
         );
         expect(getPrice).toHaveBeenCalledTimes(1);
+    });
+
+    it('should conatain an image', () => {
+        const renderCard = render(
+            <ProductCard
+                category="Для дома"
+                description="Настоящая китайская швабра"
+                id={1}
+                name="Швабра"
+                price={100}
+                imgUrl="/img.jpg"
+            />
+        );
+        expect(renderCard.getByRole('img')).toBeInTheDocument();
+    });
+
+    it('should not conatain an image', () => {
+        const renderCard = render(
+            <ProductCard
+                category="Для дома"
+                description="Настоящая китайская швабра"
+                id={1}
+                name="Швабра"
+                price={100}
+            />
+        );
+        expect(renderCard.queryByRole('img')).not.toBeInTheDocument();
     });
 });

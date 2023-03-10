@@ -40,7 +40,7 @@ describe('Testing MainPage', () => {
         expect(getNextSortBy).toHaveBeenCalledTimes(1);
     });
 
-    it.each(['Для дома', 'Одежда', 'Электроника'] as Category[])(
+    it.each<Category>(['Для дома', 'Одежда', 'Электроника'])(
         'should test category buttons click',
         (category) => {
             const renderPage = render(<MainPage />);

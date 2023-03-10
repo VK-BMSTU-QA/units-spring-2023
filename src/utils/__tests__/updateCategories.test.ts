@@ -4,16 +4,10 @@ import { updateCategories } from '../updateCategories';
 describe('test update categories function', () => {
     const categories: Category[] = ['Для дома', 'Одежда'];
 
-    it('should return list without target category', () => {
-        expect(updateCategories(categories, 'Для дома')).toStrictEqual([
-            categories[1],
-        ]);
-    });
-
-    it('should return list with target category', () => {
-        expect(updateCategories(categories, 'Электроника')).toStrictEqual([
-            ...categories,
-            'Электроника',
-        ]);
+    it.each<[Category, Category[]]>([
+        ['Для дома', [categories[1]]],
+        ['Электроника', [...categories, 'Электроника']],
+    ])('should return correct list of category', (category, extected) => {
+        expect(updateCategories(categories, category)).toStrictEqual(extected);
     });
 });
