@@ -1,8 +1,15 @@
+import { PriceSymbol } from '../../types';
 import { getPrice } from '../getPrice';
 
 describe('test get price function', () => {
-    it('should return value with price symbol', () => {
-        expect(getPrice(100, '₽')).toBe('100 ₽');
-        expect(getPrice(325, '$')).toBe('325 $');
-    });
+    it.each<[number, PriceSymbol, string]>([
+        [100, '₽', '100 ₽'],
+        [325, '$', '325 $'],
+        [1234, '$', '1,234 $'],
+    ])(
+        'should return value with price and currency',
+        (cost, currency, expected) => {
+            expect(getPrice(cost, currency as PriceSymbol)).toBe(expected);
+        }
+    );
 });
