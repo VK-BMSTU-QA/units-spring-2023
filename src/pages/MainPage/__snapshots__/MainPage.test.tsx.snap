@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test MainPage should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="main-page"
+  >
+    <h2
+      class="main-page__title"
+    >
+      VK Маркет
+    </h2>
+    <h3>
+      03:00:00
+    </h3>
+    <div
+      class="main-page__parameters"
+    >
+      <div
+        class="categories"
+      >
+        <div
+          class="categories__badge"
+        >
+          Одежда
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Для дома
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Электроника
+        </div>
+      </div>
+      <button
+        class="sort-button"
+      >
+        Сортировать по умолчанию
+      </button>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          IPhone 22
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          Top
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          1 000 $
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Электроника
+        </div>
+      </div>
+      <img
+        alt="IPhone 22"
+        class="product-card__image"
+        src="img.com"
+      />
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          Nike Air Force
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          Podcraduli
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          14 000 ₽
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Одежда
+        </div>
+      </div>
+      <img
+        alt="Nike Air Force"
+        class="product-card__image"
+        src="tapuli.img"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
