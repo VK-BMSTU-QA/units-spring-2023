@@ -1,42 +1,64 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ProductCard } from './ProductCard';
+import { Product } from '../../types';
+
+import { getPrice } from '../../utils';
+
+jest.mock('../../utils');
+
+beforeEach(() => {
+    (getPrice as jest.Mock).mockReturnValue('111 $');
+});
 
 afterEach(jest.clearAllMocks);
 
-describe('ProductCard test', () => {
-    it('should render correctly', () => {
-        const rendered = render(<ProductCard selectedCategories={[]} />);
+describe('Testing ProductCard component', () => {
+    const productMock: Product = {
+        id: 321,
+        name: 'product name',
+        description: 'product desc',
+        price: 123,
+        priceSymbol: '₽',
+        category: 'Для дома',
+    };
 
+    it('should render correctly', () => {
+        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
         expect(rendered.asFragment()).toMatchSnapshot();
     });
 
-    it('should add class for selected badge', () => {
-        const rendered = render(<Categories selectedCategories={['Одежда']} />);
-
-        expect(rendered.getByText('Одежда')).toHaveClass(
-            'categories__badge_selected'
-        );
-        expect(rendered.getByText('Электроника')).not.toHaveClass(
-            'categories__badge_selected'
-        );
-        expect(rendered.getByText('Для дома')).not.toHaveClass(
-            'categories__badge_selected'
-        );
+    it('should show price with symbol', () => {
+        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
+        expect(rendered.getByTestId('product-card__price')).toHaveTextContent('111 $');
     });
 
-    it('should call callback when category click', () => {
-        const onCategoryClick = jest.fn();
-        const rendered = render(
-            <Categories
-                selectedCategories={[]}
-                onCategoryClick={onCategoryClick}
-            />
-        );
 
-        expect(onCategoryClick).not.toHaveBeenCalled();
-        fireEvent.click(rendered.getByText('Одежда'));
-        expect(onCategoryClick).toHaveBeenCalled();
+    it('should show name', () => {
+        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
+        expect(rendered.getByTestId('product-card__name')).toHaveTextContent(productMock.name);
+    });
+
+
+    it('should show desc', () => {
+        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
+        expect(rendered.getByTestId('product-card__description')).toHaveTextContent(productMock.description);
+    });
+
+    it('should show price with symbol', () => {
+        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
+        expect(rendered.getByTestId('product-card__price')).toHaveTextContent(/([0-9])+ (\₽|\$)$/gi);
+    });
+
+    it('should show image if it is', () => {
+        const productMockWithImage : Product=  {...productMock, imgUrl: '/example.png'};
+        const rendered = render(<ProductCard key={productMock.id} {...productMockWithImage}/>);
+        expect(rendered.getByTestId('product-card__image')).toBeInTheDocument();
+    });
+
+
+    it('should not show image if it is not', () => {
+        const rendered = render(<ProductCard key={productMock.id} {...productMock} />);
+        expect(rendered.queryByTestId('product-card__image')).not.toBeInTheDocument();
     });
 });
