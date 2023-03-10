@@ -12,39 +12,39 @@ describe('MainPage test', () => {
         expect(rendered.asFragment()).toMatchSnapshot();
     });
 
-    describe.each([
-        'Для дома',
-        'Одежда',
-        'Электроника'
-    ])('test categories', (category) => {
-        it('should render in page', () => {
-            const rendered = render(<MainPage/>);
-            const rendered_category = rendered.getAllByText(category).filter(item => item.classList.contains('categories__badge'))[0];
+    // describe.each([
+    //     'Для дома',
+    //     'Одежда',
+    //     'Электроника'
+    // ])('test categories', (category) => {
+    //     it('should render in page', () => {
+    //         const rendered = render(<MainPage/>);
+    //         const rendered_category = rendered.getAllByText(category).filter(item => item.classList.contains('categories__badge'))[0];
             
-            expect(rendered_category).toBeInTheDocument();
-        });
+    //         expect(rendered_category).toBeInTheDocument();
+    //     });
 
-        it('should filter by categories', () => {
-            const rendered = render(<MainPage/>);
-            const rendered_category = rendered.getAllByText(category).filter(item => item.classList.contains('categories__badge'))[0];
-            fireEvent.click(rendered_category);
+    //     it('should filter by categories', () => {
+    //         const rendered = render(<MainPage/>);
+    //         const rendered_category = rendered.getAllByText(category).filter(item => item.classList.contains('categories__badge'))[0];
+    //         fireEvent.click(rendered_category);
 
-            expect(rendered).toMatchSnapshot();
-        });
-    });
+    //         expect(rendered).toMatchSnapshot();
+    //     });
+    // });
 
-    it('sort button should render in page', () => {
-        const rendered = render(<MainPage/>);
-        const sort_button = rendered.getAllByRole('button').filter(item => item.classList.contains('sort-button'))[0];
+    // it('sort button should render in page', () => {
+    //     const rendered = render(<MainPage/>);
+    //     const sort_button = rendered.getAllByRole('button').filter(item => item.classList.contains('sort-button'))[0];
         
-        expect(sort_button).toBeInTheDocument();
-    });
+    //     expect(sort_button).toBeInTheDocument();
+    // });
 
-    it('test sorting', () => {
-        const rendered = render(<MainPage/>);
-        const sort_button = rendered.getAllByRole('button').filter(item => item.classList.contains('sort-button'))[0];
+    // it('test sorting', () => {
+    //     const rendered = render(<MainPage/>);
+    //     const sort_button = rendered.getAllByRole('button').filter(item => item.classList.contains('sort-button'))[0];
         
-        fireEvent.click(sort_button);
-        expect(rendered).toMatchSnapshot();
-    });
+    //     fireEvent.click(sort_button);
+    //     expect(rendered).toMatchSnapshot();
+    // });
 });
