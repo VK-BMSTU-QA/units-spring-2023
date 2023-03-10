@@ -9,7 +9,7 @@ describe('MainPage test', () => {
     it('test render page without currentTime', () => {
         const rendered = render(<MainPage/>);
         
-        expect(rendered.asFragment()).toMatchSnapshot();
+        expect(rendered).toMatchSnapshot();
     });
 
     describe.each([
@@ -29,7 +29,7 @@ describe('MainPage test', () => {
             const rendered_category = rendered.getAllByText(category).filter(item => item.classList.contains('categories__badge'))[0];
             fireEvent.click(rendered_category);
 
-            expect(rendered.asFragment()).toMatchSnapshot();
+            expect(rendered).toMatchSnapshot();
         });
     });
 
@@ -45,6 +45,6 @@ describe('MainPage test', () => {
         const sort_button = rendered.getAllByRole('button').filter(item => item.classList.contains('sort-button'))[0];
         
         fireEvent.click(sort_button);
-        expect(rendered.asFragment()).toMatchSnapshot();
+        expect(rendered).toMatchSnapshot();
     });
 });
