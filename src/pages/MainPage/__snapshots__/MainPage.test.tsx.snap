@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test mainPage should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="main-page"
+  >
+    <h2
+      class="main-page__title"
+    >
+      VK Маркет
+    </h2>
+    <h3>
+      03:00:00
+    </h3>
+    <div
+      class="main-page__parameters"
+    >
+      <div
+        class="categories"
+      >
+        <div
+          class="categories__badge"
+        >
+          Одежда
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Для дома
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Электроника
+        </div>
+      </div>
+      <button
+        class="sort-button"
+      >
+        Сортировать по умолчанию
+      </button>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          Приора
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          Ауф для души
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          10 000 000 ₽
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          car
+        </div>
+      </div>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          Ryzen 2700
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          the best of the best processor
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          400 $
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Электроника
+        </div>
+      </div>
+      <img
+        alt="Ryzen 2700"
+        class="product-card__image"
+        src="/proc.png"
+      />
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          Принтер
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          Незаменимая вещь для студента
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          7 000 ₽
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Электроника
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
