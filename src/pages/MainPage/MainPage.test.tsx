@@ -26,6 +26,7 @@ jest.mock('../../utils/getNextSortBy', () => {
 });
 
 describe('Main page', () => {
+    
     test('render', () => {
         const renderedPage = render(<MainPage/>)
         expect(renderedPage.asFragment()).toMatchSnapshot();
