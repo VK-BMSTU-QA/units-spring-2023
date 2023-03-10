@@ -29,35 +29,21 @@ describe('Тест функции productComparator', () => {
         [productsMock, 'по возрастанию цены' as SortBy, productsMock],
         [[
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
+                ...productsMock[1],
                 price: 10000,
                 priceSymbol: '$',
-                category: 'Для дома' as Category,
             },
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника'  as Category,
+                ...productsMock[0]
             },
         ] as Product[],'по возрастанию цены' as SortBy, [
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника'  as Category,
+                ...productsMock[0]
             },
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
+                ...productsMock[1],
                 price: 10000,
                 priceSymbol: '$',
-                category: 'Для дома' as Category,
             },
         ] as Product[]],
     ])('Сортировка по возрастанию цены', (products, sortedBy, expected) => {
@@ -67,51 +53,29 @@ describe('Тест функции productComparator', () => {
     it.each([
         [productsMock, 'по убыванию цены' as SortBy, [
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
-                price: 200000,
-                category: 'Для дома' as Category,
+                ...productsMock[1]
             },
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника'  as Category,
+                ...productsMock[0]
             },
         ] as Product[]],
         [[
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
+                ...productsMock[1],
                 price: 10000,
                 priceSymbol: '$',
-                category: 'Для дома' as Category,
             },
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника'  as Category,
+                ...productsMock[0]
             },
         ] as Product[],'по убыванию цены' as SortBy, [
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
+                ...productsMock[1],
                 price: 10000,
                 priceSymbol: '$',
-                category: 'Для дома' as Category,
             },
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника'  as Category,
+                ...productsMock[0]
             },
         ] as Product[]],
     ])('Сортировка по убыванию цены', (products, sortedBy, expected) => {
@@ -121,11 +85,8 @@ describe('Тест функции productComparator', () => {
     it('Сортировка при одинаковой цене', () => {
         const products: Product[] = [
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный диван',
+                ...productsMock[1],
                 price: 10000,
-                category: 'Для дома' as Category,
             },
             {
                 id: 1,
@@ -137,11 +98,8 @@ describe('Тест функции productComparator', () => {
         ];
         const expected: Product[] = [
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный диван',
+                ...productsMock[1],
                 price: 10000,
-                category: 'Для дома' as Category,
             },
             {
                 id: 1,

@@ -29,19 +29,11 @@ describe('Тест функции applyCategories', () => {
     it.each([
         [productsMock, ['Электроника'], [
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника' as Category,
+                ...productsMock[0]
             }] as Product[]],
         [productsMock, ['Для дома', 'Еда'], [
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
-                price: 200000,
-                category: 'Для дома' as Category,
+                ...productsMock[1]
             }] as Product[]]
     ])('Выбор товаров, удовлетворяющих одной категории', (products, categoriesMock, expected) => {
         const categories: Category[] = categoriesMock as Category[];
@@ -52,33 +44,17 @@ describe('Тест функции applyCategories', () => {
     it.each([
         [productsMock, ['Электроника', 'Для дома'], [
             {
-                id: 1,
-                name: 'Наушники',
-                description: 'Беспроводные наушники',
-                price: 10000,
-                category: 'Электроника' as Category,
+                ...productsMock[0],
             },
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
-                price: 200000,
-                category: 'Для дома' as Category,
+                ...productsMock[1]
             }] as Product[]],
         [productsMock, ['Для дома', 'Еда', 'Одежда'], [
             {
-                id: 2,
-                name: 'Диван',
-                description: 'Красный кожаный диван',
-                price: 200000,
-                category: 'Для дома' as Category,
+                ...productsMock[1]
             },
             {
-                id: 3,
-                name: 'Платье',
-                description: 'Летнее шифоновое платье',
-                price: 5000,
-                category: 'Одежда' as Category,
+                ...productsMock[2]
             }] as Product[]]
     ])('Выбор товаров, удовлетворяющих нескольким категориям', (products, categoriesMock, expected) => {
         const categories: Category[] = categoriesMock as Category[];
