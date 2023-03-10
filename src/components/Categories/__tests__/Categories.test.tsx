@@ -1,10 +1,11 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Categories } from './Categories';
+import { Categories } from '../Categories';
 
-afterEach(jest.clearAllMocks);
 describe('Categories test', () => {
+    afterEach(jest.clearAllMocks);
+
     it('should render correctly', () => {
         const rendered = render(<Categories selectedCategories={[]} />);
 
