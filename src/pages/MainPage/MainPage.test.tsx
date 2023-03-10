@@ -32,7 +32,7 @@ jest.useFakeTimers().setSystemTime(new Date(2023, 0, 1, 3, 0, 0, 0));
 jest.mock('../../utils/getNextSortBy', () => {
     return {
         __esModule: true,
-        getNextSortBy: jest.fn(() => 'по убыванию цены'),
+        getNextSortBy: jest.fn(() => 'по возрастанию цены'),
     };
 });
 
