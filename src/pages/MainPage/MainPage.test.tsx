@@ -3,6 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MainPage } from './MainPage';
 jest.mock('../../hooks/useCurrentTime');
+jest.mock('../../utils/getPrice');
 
 afterEach(jest.clearAllMocks);
 describe('MainPage test', () => {
