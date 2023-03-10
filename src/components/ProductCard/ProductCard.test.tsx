@@ -15,7 +15,6 @@ jest.mock('../../utils/getPrice', () => {
     };
 });
 
-
 const testProduct: Product  = 
     {
         id: 1,
