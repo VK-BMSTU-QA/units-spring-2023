@@ -27,10 +27,6 @@ describe('Button render', () => {
         expect(renderedButton.getByRole('button')).toHaveTextContent(
             'Сортировать по умолчанию'
         );
-
-        expect(onSortButtonClick).toHaveBeenCalledTimes(0);
-        fireEvent.click(renderedButton.getByRole('button'));
-        expect(onSortButtonClick).toHaveBeenCalledTimes(1);
     });
     it('should onSortButtonClick called once after click', () => {
         const onSortButtonClick = jest.fn();
