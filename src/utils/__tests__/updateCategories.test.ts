@@ -7,7 +7,7 @@ describe('test updateCategories function', () => {
         categories = ['Для дома', 'Одежда', 'Электроника'];
     });
 
-    it('return categories without changedCategory', () => {
+    it('return categories without changed category', () => {
         expect(updateCategories(categories, 'Для дома')).toEqual([
             'Одежда',
             'Электроника',

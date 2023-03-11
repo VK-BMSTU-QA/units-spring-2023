@@ -41,7 +41,7 @@ describe('test productComparator function', () => {
     });
 
     it('return 1 if sortBy по возрастанию цены and 1 product > 2 product ', () => {
-        expect(productComparator('по возрастанию цены')(product[0] as Product,product[1] as Product)).toBe(1);
+        expect(productComparator('по возрастанию цены')(product[0], product[1])).toBe(1);
     });
 
     it('return 1 if sortBy по убыванию цены and 2 product > 1 product ', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, RenderResult } from '@testing-library/react';
 import { getNextSortBy, updateCategories } from '../../utils';
 import { MainPage } from './MainPage';
 import { PriceSymbol, Product } from '../../types';
@@ -35,7 +35,7 @@ const products: Product[] = [
 
 afterEach(jest.clearAllMocks);
 
-jest.useFakeTimers().setSystemTime(new Date(2023, 0, 1, 3, 0, 0, 0));
+jest.useFakeTimers().setSystemTime(new Date(2023, 0, 0, 0, 0, 0, 0));
 
 jest.mock('../../hooks/useProducts', () => {
     return {
@@ -61,17 +61,39 @@ jest.mock('../../utils/getPrice', () => {
     };
 });
 
+jest.mock('../../utils/updateCategories', () => {
+    return {
+        __esModule: true,
+        updateCategories: jest.fn(() => []),
+    };
+});
+
 describe('MainPage test', () => {
+    let rendered: RenderResult;
+    beforeEach(() => {
+        rendered = render(<MainPage />);
+    });
+
     it('should render correctly', () => {
-        const rendered = render(<MainPage />);
         expect(rendered.asFragment()).toMatchSnapshot();
     });
 
-    it('should select category', () => {
-        const rendered = render(<MainPage />);
-
+    it('should select category once', () => {
         expect(getNextSortBy).toHaveBeenCalledTimes(0);
         fireEvent.click(rendered.getByText('Сортировать по умолчанию'));
         expect(getNextSortBy).toHaveBeenCalledTimes(1);
+    });
+
+    it('should update categories once', () => {
+        expect(updateCategories).toHaveBeenCalledTimes(0);
+        const category = rendered
+            .getAllByText('Электроника')
+            .find((elem) => elem.classList.contains('categories__badge'));
+        if (!category) {
+            return;
+        }
+
+        fireEvent.click(category);
+        expect(updateCategories).toHaveBeenCalledTimes(1);
     });
 });

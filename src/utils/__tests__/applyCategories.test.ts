@@ -36,7 +36,7 @@ describe('test applyCategories function', () => {
         expect(applyCategories(product, [])).toEqual(product);
     });
 
-    it('should return products with transferred categories', () => {
+    it('should return products applied categories', () => {
         expect(applyCategories(product, ['Одежда'])).toEqual([product[2]]);
     });
 });
