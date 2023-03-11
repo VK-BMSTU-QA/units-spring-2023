@@ -56,7 +56,7 @@ describe('product card image test', () => {
         expect(image).toBe(null);
     });
 
-    it('should not add image', () => {
+    it('should add image', () => {
         const renderedCard = render(
             <ProductCard
                 id={0}
