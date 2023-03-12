@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage view rendering 1`] = `
+<DocumentFragment>
+  <div
+    class="main-page"
+  >
+    <h2
+      class="main-page__title"
+    >
+      VK Маркет
+    </h2>
+    <h3>
+      12:00:00
+    </h3>
+    <div
+      class="main-page__parameters"
+    >
+      <div
+        class="categories"
+      >
+        <div
+          class="categories__badge"
+        >
+          Одежда
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Для дома
+        </div>
+        <div
+          class="categories__badge"
+        >
+          Электроника
+        </div>
+      </div>
+      <button
+        class="sort-button"
+      >
+        Сортировать по умолчанию
+      </button>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          product 1
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          description 1
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          10 $
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Для дома
+        </div>
+      </div>
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          product 2
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          description 1
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          100 $
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Для дома
+        </div>
+      </div>
+      <img
+        alt="product 2"
+        class="product-card__image"
+        src="./someImg.png"
+      />
+    </div>
+    <div
+      class="product-card"
+    >
+      <div
+        class="product-card__text"
+      >
+        <h2
+          class="product-card__name"
+        >
+          product 3
+        </h2>
+        <div
+          class="product-card__description"
+        >
+          description 3
+        </div>
+        <h1
+          class="product-card__price"
+        >
+          1 000 ₽
+        </h1>
+        <div
+          class="product-card__category"
+        >
+          Электроника
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
