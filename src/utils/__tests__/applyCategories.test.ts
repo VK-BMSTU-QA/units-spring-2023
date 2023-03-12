@@ -2,7 +2,7 @@ import { Product } from '../../types';
 import { applyCategories } from '../applyCategories';
 
 describe('test applyCategories function', () => {
-    let product: {category:string}[];
+    let product: Pick<Product, 'category'>[];
     beforeAll(() => {
         product = [
             {

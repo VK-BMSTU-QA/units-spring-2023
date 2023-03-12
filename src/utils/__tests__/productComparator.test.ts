@@ -2,7 +2,7 @@ import { Product } from "../../types";
 import { productComparator } from "../productComparator";
 
 describe('test productComparator function', () => {
-    let product: {price:number}[];
+    let product: Pick<Product, 'price'>[];
     beforeAll(() => {
         product = [
             {
