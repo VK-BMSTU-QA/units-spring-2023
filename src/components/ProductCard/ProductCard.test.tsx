@@ -33,7 +33,6 @@ describe('test ProductCard', () => {
 
     it('test getPrice call', () => {
         render(<ProductCard {...product} />);
-        expect(getPrice).toBeCalledTimes(1);
         expect(getPrice).toHaveBeenCalledTimes(1);
     });
 });

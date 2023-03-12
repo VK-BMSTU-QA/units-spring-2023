@@ -29,11 +29,9 @@ jest.mock('../../utils/updateCategories', () => {
     };
 });
 
-beforeAll(() =>
-    jest.useFakeTimers().setSystemTime(new Date('2000-01-09T04:54:00'))
-);
+jest.useFakeTimers().setSystemTime(new Date('2000-01-09T04:54:00'));
 
-afterAll(() => jest.useRealTimers());
+//afterAll(() => jest.useRealTimers());
 
 afterEach(jest.clearAllMocks);
 
