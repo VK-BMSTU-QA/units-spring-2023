@@ -3,11 +3,22 @@ import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MainPage } from './MainPage';
 import { getNextSortBy, updateCategories } from '../../utils';
+import { PriceSymbol } from '../../types';
 
 jest.mock('../../utils/getNextSortBy', () => {
     return {
         __esModule: true,
         getNextSortBy: jest.fn(() => 'по умолчанию'),
+    };
+});
+
+jest.mock('../../utils/getPrice', () => {
+    return {
+        __esModule: true,
+        getPrice: jest.fn(
+            (value: number, symbol: PriceSymbol = '₽'): string =>
+                `${value.toLocaleString('ru-RU')} ${symbol}`
+        ),
     };
 });
 
